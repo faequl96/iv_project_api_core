@@ -1,18 +1,21 @@
 name: iv_project_api_core
 description: "IV Project Api Core"
-version: 0.0.2
+version: 0.0.4
 homepage:
 publish_to: none
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.10.1
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  dio: ^5.8.0+1
+  iv_project_core:
+    path: ../iv_project_core
+
+  dio: ^5.9.0
   shared_preferences: ^2.5.3
 
 dev_dependencies:

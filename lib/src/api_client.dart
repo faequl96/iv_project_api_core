@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:iv_project_api_core/src/api_interceptor.dart';
+import 'package:iv_project_core/iv_project_core.dart';
 
 class ApiClient {
   const ApiClient._();
@@ -7,13 +8,12 @@ class ApiClient {
   static late final Dio dio;
 
   static void init({
-    required String baseUrl,
     Duration connectTimeout = const Duration(seconds: 30),
     Duration receiveTimeout = const Duration(seconds: 30),
   }) {
     dio = Dio(
       BaseOptions(
-        baseUrl: baseUrl,
+        baseUrl: ApiConfig.url,
         connectTimeout: connectTimeout,
         receiveTimeout: receiveTimeout,
         responseType: ResponseType.json,

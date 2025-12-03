@@ -107,13 +107,6 @@ class InvitationEndpoints {
   static const deleteById = '/invitation/id/';
 }
 
-class InvitationDataEndpoints {
-  const InvitationDataEndpoints._();
-
-  static const getById = '/invitation-data/id/';
-  static const updateById = '/invitation-data/id/';
-}
-
 class TransactionEndpoints {
   const TransactionEndpoints._();
 
