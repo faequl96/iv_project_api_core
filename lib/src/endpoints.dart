@@ -102,7 +102,6 @@ class InvitationEndpoints {
   static const create = '/invitation';
   static const getById = '/invitation/id/';
   static const gets = '/invitations';
-  static const getsByUserId = '/invitations/user-id/';
   static const updateById = '/invitation/id/';
   static const deleteById = '/invitation/id/';
 }

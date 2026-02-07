@@ -7,18 +7,8 @@ class ApiClient {
 
   static late final Dio dio;
 
-  static void init({
-    Duration connectTimeout = const Duration(seconds: 30),
-    Duration receiveTimeout = const Duration(seconds: 30),
-  }) {
-    dio = Dio(
-      BaseOptions(
-        baseUrl: ApiConfig.url,
-        connectTimeout: connectTimeout,
-        receiveTimeout: receiveTimeout,
-        responseType: ResponseType.json,
-      ),
-    );
+  static void init({Duration connectTimeout = const Duration(minutes: 5), Duration receiveTimeout = const Duration(minutes: 5)}) {
+    dio = Dio(BaseOptions(baseUrl: ApiUrl.value, responseType: ResponseType.json));
 
     dio.options.headers = {'Accept-Language': 'id'};
 
