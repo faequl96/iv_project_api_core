@@ -21,15 +21,15 @@ class ApiException implements Exception {
         statusCode = data['status_code'];
         message = data['message'] ?? message;
       }
-    } else if (error.type == DioExceptionType.connectionTimeout) {
+    } else if (error.type == .connectionTimeout) {
       message = 'Koneksi timeout';
-    } else if (error.type == DioExceptionType.receiveTimeout) {
+    } else if (error.type == .receiveTimeout) {
       message = 'Timeout menerima data';
-    } else if (error.type == DioExceptionType.sendTimeout) {
+    } else if (error.type == .sendTimeout) {
       message = 'Timeout mengirim data';
-    } else if (error.type == DioExceptionType.badResponse) {
+    } else if (error.type == .badResponse) {
       message = 'Respon buruk dari server';
-    } else if (error.type == DioExceptionType.cancel) {
+    } else if (error.type == .cancel) {
       message = 'Request dibatalkan';
     } else {
       message = error.message ?? message;

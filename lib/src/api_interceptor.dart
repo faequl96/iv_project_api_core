@@ -3,8 +3,8 @@ import 'package:iv_project_api_core/src/access_token_storage.dart';
 
 class ApiInterceptor extends Interceptor {
   @override
-  void onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
-    String? token = await AccessTokenStorage.getToken();
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+    String? token = AccessTokenStorage.getToken();
 
     if (token != null) {
       options.headers['Authorization'] = 'Bearer $token';
